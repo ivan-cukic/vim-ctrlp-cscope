@@ -24,7 +24,7 @@ fu! s:syntax()
     en
 endf
 
-python << endpython
+py3 << endpython
 
 import vim
 import os
@@ -67,7 +67,7 @@ call add(g:ctrlp_ext_vars, {
 " Return: a Vim's List
 "
 function! ctrlp#cscope#init()
-python << endpython
+py3 << endpython
 
 current_word = vim.eval('s:current_word')
 current_mode = vim.eval('g:ctrlp_cscope_mode')
@@ -132,7 +132,7 @@ endfunction
 " endfunction
 
 function! ctrlp#cscope#accept(mode, string)
-python << endpython
+py3 << endpython
 mode   = vim.eval("a:mode")
 string = vim.eval("a:string")
 
